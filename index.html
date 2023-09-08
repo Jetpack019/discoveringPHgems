@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <section>
+       <div class="intro">
+        <header>
+            <div class="logo_discoverPHgems">
+             <img src="images/logo.png" alt="">
+            </div>
+             <div class="left_nav_container">
+                 <div class="hotline">
+                     <h3>+1 (555) 123-4567</h3>
+                 </div>
+                 <nav>
+                     <ul>
+                         <li><a href="#">Home</a></li>
+                         <li><a href="#">Destinations</a></li>
+                         <li><a href="#">Travel Tips</a></li>
+                         <li><a href="#">Blog</a></li>
+                         <li><a href="#">About Us</a></li>
+                         <li><a href="#">Contact</a></li>
+                     </ul>
+                 </nav>
+             </div>
+         </header>
+        <div class="intro_hero">
+            <h2>Welcome to <span>Discovering</span>PHGems</h2>
+            <h4>Your Gateway to Philippine Paradise!</h4>
+        </div>
+       </div>
+    </section>
+    
+    <section>
+        <div class="featured_destinations">
+            <h1>Featured Destinations</h1>
+
+            <div class="container_featured_destination">
+                <img src="images/rocks.jpg" alt="Image Places">
+                <div class="container_featured_content">
+                    <h2>Palawan</h2>
+                    <h3>The Last Frontier</h3>
+                    <h4>Dive into the crystal-clear waters of Palawan, home to the world-famous El Nido and Coron, where towering limestone cliffs meet turquoise lagoons.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="latest_blogpost">
+            <h1>Latest Blog Posts</h1>
+            <div class="container_blog">
+                <div class="container_blog_post_content">
+                    <h2>A Journey Through Time:  <br> Exploring Intramuros, Manila</h2>
+                    <h3>Delve into the rich history of Manila as we walk through the ancient walls of Intramuros, uncovering centuries-old stories.</h3>
+                </div>
+                <div class="container_images_blog_post">
+                    <img src="images/rocks1.jpg" alt="Image Post 1" class="image_blog">
+                    <img src="images/beach1.jpg" alt="Image Post 2" class="image_blog">
+                    <img src="images/river.jpg" alt="Image Post 3"  class="image_blog">
+                </div>
+            </div>
+
+            <div class="container_blog">
+                <div class="container_blog_post_content">
+                    <h2>Island-Hopping Paradise:     <br> El Nido, Palawan</h2>
+                    <h3>Get ready for island-hopping adventures as we guide you through the mesmerizing islands and lagoons of El Nido.</h3>
+                </div>
+                <div class="container_images_blog_post">
+                    <img src="images/rocks1.jpg" alt="Image Post 1" class="image_blog">
+                    <img src="images/beach1.jpg" alt="Image Post 2" class="image_blog">
+                    <img src="images/river.jpg" alt="Image Post 3"  class="image_blog">
+                </div>
+            </div>
+
+            <div class="container_blog">
+                <div class="container_blog_post_content">
+                    <h2>Island-Hopping Paradise:     <br> El Nido, Palawan</h2>
+                    <h3>Get ready for island-hopping adventures as we guide you through the mesmerizing islands and lagoons of El Nido.</h3>
+                </div>
+                <div class="container_images_blog_post">
+                    <img src="images/rocks1.jpg" alt="Image Post 1" class="image_blog">
+                    <img src="images/beach1.jpg" alt="Image Post 2" class="image_blog">
+                    <img src="images/river.jpg" alt="Image Post 3"  class="image_blog">
+                </div>
+            </div>
+
+            <div class="container_blog">
+                <div class="container_blog_post_content">
+                    <h2>Island-Hopping Paradise:     <br> El Nido, Palawan</h2>
+                    <h3>Get ready for island-hopping adventures as we guide you through the mesmerizing islands and lagoons of El Nido.</h3>
+                </div>
+                <div class="container_images_blog_post">
+                    <img src="images/rocks1.jpg" alt="Image Post 1" class="image_blog">
+                    <img src="images/beach1.jpg" alt="Image Post 2" class="image_blog">
+                    <img src="images/river.jpg" alt="Image Post 3"  class="image_blog">
+                </div>
+            </div>
+
+            <div class="container_blog">
+                <div class="container_blog_post_content">
+                    <h2>Island-Hopping Paradise:     <br> El Nido, Palawan</h2>
+                    <h3>Get ready for island-hopping adventures as we guide you through the mesmerizing islands and lagoons of El Nido.</h3>
+                </div>
+                <div class="container_images_blog_post">
+                    <img src="images/rocks1.jpg" alt="Image Post 1" class="image_blog">
+                    <img src="images/beach1.jpg" alt="Image Post 2" class="image_blog">
+                    <img src="images/river.jpg" alt="Image Post 3"  class="image_blog">
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                let top = window.scrollY;
+                let sec = $("section")[0]; // Define sec as the first <section> element
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                
+              
+                if (top >= offset && top < offset + height) {
+                    $(".intro_hero").css({
+                        'transform': 'translateX(0px)',
+                        'transition': 'transform 0.5s ease',
+                    });
+
+                    
+                } else {
+                     $(".intro_hero").css({
+                        'transform': 'translateX(-500px)',
+                    });   
+                }
+
+                let sec2 = $("section")[1]; 
+                let offset2 = sec2.offsetTop - 150; 
+                let height2 = sec2.offsetHeight;
+    
+
+                if (top >= offset2 && top < offset2 + height2) {
+                    $(".featured_destinations").css({
+                        'transform': 'translateX(0px)',
+                        'transition': 'transform 1s ease, opacity 1s ease',
+                        'opacity': '1'
+                    });
+                    $(".featured_destinations h1").css({
+                        'transform': 'translateX(0px)',
+                        'transition': 'transform 1s ease',
+                    });
+                } else {
+                    $(".featured_destinations").css({
+                        'transform': 'translateX(-1000px)',
+                        'opacity': '0.5'
+                    });
+                    $(".featured_destinations h1").css({
+                        'transform': 'translateX(-1000px)'
+                    });
+                }
+
+
+                let sec3 = $("section")[2]; 
+                let offset3 = sec3.offsetTop - 150; 
+                let height3 = sec3.offsetHeight;
+    
+
+                if (top >= offset3 && top < offset3 + height3) {
+                    $(".latest_blogpost h1").css({
+                        'transform': 'translateY(0px)',
+                        'transition': 'transform 1s ease, opacity 1s ease',
+                        'opacity': '1'
+                    });
+
+                    $(".container_blog_post_content").css({
+                        'transform': 'translateX(0px)',
+                        'transition': 'transform 1s ease, opacity 1s ease',
+                        'opacity': '1'
+                    });
+
+                    $(".container_images_blog_post").css({
+                        'transition': 'transform 3s ease, opacity 3s ease',
+                        'opacity': '1',
+                        'display': 'visible'
+                    });
+                } else {
+                    $(".latest_blogpost h1").css({
+                        'transform': 'translateY(1000px)',
+                        'opacity': '0.5'
+                    });
+
+                    $(".container_blog_post_content").css({
+                        'transform': 'translateX(-1000px)',
+                        'opacity': '0.5'
+                    });
+
+                    $(".container_images_blog_post").css({
+                        'opacity': '0',
+                        'display': 'hidden'
+                    });
+                }
+
+                
+            });
+        });
+    </script>
+    
+</body>
+</html>
