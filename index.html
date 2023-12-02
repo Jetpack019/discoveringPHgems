@@ -170,45 +170,37 @@
                 }
 
 
-                let sec3 = $("section")[2]; 
-                let offset3 = sec3.offsetTop - 150; 
-                let height3 = sec3.offsetHeight;
-    
+                    let sec3 = $("section")[2]; 
+                    let offset3 = sec3.offsetTop - 150; 
+                    let height3 = $(sec3).height();
+        
 
-                if (top >= offset3 && top < offset3 + height3) {
-                    $(".latest_blogpost h1").css({
-                        'transform': 'translateY(0px)',
-                        'transition': 'transform 1s ease, opacity 1s ease',
-                        'opacity': '1'
-                    });
+                    if (top >= offset3 && top < offset3 + height3) {
+                        $(".latest_blogpost h1").css({
+                            'transform': 'translateY(0px)',
+                            'transition': 'transform 1s ease, opacity 1s ease',
+                            'opacity': '1'
+                        });
 
-                    $(".container_blog_post_content").css({
-                        'transform': 'translateX(0px)',
-                        'transition': 'transform 1s ease, opacity 1s ease',
-                        'opacity': '1'
-                    });
+                        $(".latest_blogpost").css({
+                            'transform': 'translateX(0px)',
+                            'transition': 'transform 1s ease, opacity 1s ease',
+                            'opacity': '1'
+                        });
 
-                    $(".container_images_blog_post").css({
-                        'transition': 'transform 3s ease, opacity 3s ease',
-                        'opacity': '1',
-                        'display': 'visible'
-                    });
-                } else {
-                    $(".latest_blogpost h1").css({
-                        'transform': 'translateY(1000px)',
-                        'opacity': '0.5'
-                    });
+                      
+                    }  if (top < height3 && top < offset3 ) {
 
-                    $(".container_blog_post_content").css({
-                        'transform': 'translateX(-1000px)',
-                        'opacity': '0.5'
-                    });
+                        $(".latest_blogpost h1").css({
+                            'transform': 'translateX(-1000px)',
+                            'opacity': '0.5'
+                        });
 
-                    $(".container_images_blog_post").css({
-                        'opacity': '0',
-                        'display': 'hidden'
-                    });
-                }
+                        $(".latest_blogpost").css({
+                            'opacity': '0',
+                            'display': 'hidden'
+                        });
+                    }
 
                 
             });
