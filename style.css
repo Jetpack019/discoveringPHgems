@@ -3,7 +3,6 @@
 body {
     margin: 0;
     padding: 0;
-
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -210,4 +209,28 @@ li a:hover{
 .container_images_blog_post img:nth-child(3){
     transform: translateX(270px) rotate(30deg);
     z-index: 2;
+}
+
+.travel_tips{
+    margin-top: 1500px;
+}
+.travel_tips h1{
+    color: #FF620A;
+    font-size: 60px;
+    font-weight:550;
+    padding-top: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.container_icons_text{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Two columns */
+    grid-template-rows: repeat(3, 1fr); /* Three rows */
+    grid-gap: 100px;
+    margin: 0px 250px;
+}
+.container_icons_text img{
+    width: 150px;
+    height: 200px;
+
 }

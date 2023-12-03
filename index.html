@@ -119,7 +119,23 @@
         </div>
     </section>
 
- 
+    <section>
+        <div class="travel_tips">
+            <h1>Travel Tips</h1>
+            <div class="container_icons_text">
+                <img src="images/logo_text1.png" alt="packaging essentials">
+                <img src="images/logo_text1.png" alt="visa and entry">
+                <img src="images/logo_text3.png" alt="budget travel">
+                <img src="images/logo_text4.png" alt="safety and health">
+                <img src="images/logo_text3.png" alt="cuisine and dining">
+                <img src="images/logo_text4.png" alt="local insights">
+            </div>
+        </div>
+
+        
+    </section>
+
+ <!-- sdasda -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script>
@@ -161,7 +177,7 @@
                     });
                 } else {
                     $(".featured_destinations").css({
-                        'transform': 'translateX(-1000px)',
+                        'transform': 'translateX(-1200px)',
                         'opacity': '0.5'
                     });
                     $(".featured_destinations h1").css({
@@ -170,9 +186,9 @@
                 }
 
 
-                    let sec3 = $("section")[2]; 
-                    let offset3 = sec3.offsetTop - 150; 
-                    let height3 = $(sec3).height();
+                let sec3 = $("section")[2]; 
+                let offset3 = sec3.offsetTop - 150; 
+                let height3 = $(sec3).height();
         
 
                     if (top >= offset3 && top < offset3 + height3) {
@@ -201,6 +217,23 @@
                             'display': 'hidden'
                         });
                     }
+                
+                let sec4 = $("section")[3]; 
+                let offset4 = sec4.offsetTop - 150; 
+                let height4 = $(sec4).height();
+
+                if (top >= offset4 && top < offset4 + height4) {
+                    $(".travel_tips").css({
+                        'transform': 'translateX(0px)',
+                        'transition': 'transform 0.5s ease',
+                    });
+
+                    
+                } else {
+                     $(".travel_tips").css({
+                        'transform': 'translateX(-1100px)',
+                    });   
+                }
 
                 
             });
